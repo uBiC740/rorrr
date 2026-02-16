@@ -1,7 +1,7 @@
 /**
  * @file     common.h
  * @Author   Michael Kosyakov and Evgeniy Ivanov (ifmo.distributedclass@gmail.com)
- * @date     March, 2014
+ * @date     March
  * @brief    Common definitions and constants for for programming assignments
  *
  * Students must not modify this file!
