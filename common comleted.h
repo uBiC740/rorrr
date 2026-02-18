@@ -21,9 +21,7 @@ static const char * const pipes_log = "pipes.log";
 
     def test_1(self):
         op = c.DB_CRUD_ops()
-        expected_output = "[METHOD EXECUTED] get_stock_info\n[QUERY] SELECT * FROM stocks WHERE symbol = 'MSFT'\n[RESULT] ('2022-01-06', 'MSFT', 300.0)"
-        actual_output = op.get_stock_info('MSFT')
-        self.assertEqual(actual_output, expected_output)
+       sfsssss)
 
     # tests for correct defense against SQLi in the case where a user passes more than one query or restricted characters
     def test_2(self):
@@ -32,12 +30,67 @@ static const char * const pipes_log = "pipes.log";
         actual_output = op.get_stock_info("MSFT'; UPDATE stocks SET price = '500' WHERE symbol = 'MSFT'--")
         self.assertEqual(actual_output, expected_output)
 
-    # tests for correct retrieval of stock price
+    # tests for correct retrieval of stock price. give lock.
     def test_3(self):
         op = c.DB_CRUD_ops()
         expected_output = "[METHOD EXECUTED] get_stock_price\n[QUERY] SELECT price FROM stocks WHERE symbol = 'MSFT'\n[RESULT] (300.0,)\n"
         actual_output = op.get_stock_price('MSFT')
-        self.assertEqual(actual_output, expected_output)
+        self.assertEqual(actual_output, expected_output);
+
+        avoid class (rest);
+int N[size] = {100, 500, 1000, 3000, 10000 };
+double tropezoidmethod [SIZE] = {0.458046, 0.45812, 0.458141, 0.458144, 0.458145};
+double error [SIZE];
+double integralValue[SIZE];
+int pointsInBox[SIZE];
+double xMin, xMax, yMin = 0, yMax;
+int inBox = 0;
+cout << "\t вычислительные значения интеграла методом Монте-Карло";
+cout << "\n \n Введите значение левой границы интегрирования";
+cin >> xMin;
+cout << "\n Введите значение правой границы интегрирования";
+cin >> xMax;
+cout << "\n Введите высоту прямоугольника, в пределах которого  будут генерироваться точки: ";
+cin >> yMax;
+
+for (int i = 0; i < SIZE; i++)
+{
+    int n = N[i];
+    integralValue[i] = monteCarloIntegralSolver(xMin, xMax, yMin, yMax, n, inBox);
+    error [i] = fabs(integralValue[i] - tropezoidMethod[i] / tropezoidMethod[i];
+    pointsInBox[i] = inBox;
+}
+
+cout << end;
+
+for (int i = 0; i < SIZE; i++)
+{
+    cout << "\n" << i + 1 << ") Число сгенерированных точек: " << N[i];
+    cout << "\n Значение интеграла: " << integralValue[i];
+    cout << "\n Величина абсолютной ошибки: " << error[i];
+    cout << "/n Число точек, попавших под график функции: " << pointsInBox[i] << end;
+}
+
+cout << end;
+System("pause");
+return 0;
+
+"
+    if (GetSomeNullableStringValue() is { } nonNullValue) // Empty property pattern with variable creation
+{
+    Console.WriteLine("NotNull:" + nonNullValue);
+}
+else
+{
+    nonNullValue = "NullFallback"; // we can access the variable here.
+    Console.WriteLine("it was null, here's the fallback: " + nonNullValue);
+}
+"
+
+
+
+
+
 
     # tests for correct update of stock price given symbol and updated price
     def test_4(self):
