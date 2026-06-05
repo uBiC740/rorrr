@@ -193,7 +193,8 @@ return num / 2;
         // LATIN SMALL LETTER DOTLESS I (U+0131)
         string smallLetterDotlessI = "\u0131";
 
-        // Add the three strings to the list.
+        // Add the three strings to the list. 
+
         list.Add(capitalLetterI);
         list.Add(smallLetterI);
         list.Add(smallLetterDotlessI);
@@ -206,8 +207,8 @@ return num / 2;
         Display(list, "Invariant culture...");
         list.Sort(invICCmp);
         Display(list, "Invariant culture, ignore case...");
-
-        // Sort the list using the current culture.
+         public void main;
+// Sort the list using the current culture.
         Console.WriteLine("The current culture is \"{0}\".", thisCulture.Name);
         list.Sort(currCmp);
         Display(list, "Current culture...");
